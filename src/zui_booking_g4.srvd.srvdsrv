@@ -1,0 +1,6 @@
+@EndUserText.label: 'Booking Service Definition'
+define service ZUI_Booking_G4 {
+  expose ZC_Booking_G4 as Booking;
+  expose ZI_BUS_G4 as Bus;
+  expose ZI_TRAVEL_G4 as Travel;
+}

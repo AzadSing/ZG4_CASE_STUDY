@@ -1,0 +1,25 @@
+managed;// implementation in class zbp_i_travel_g4 unique;
+//strict;
+
+define behavior for ZI_TRAVEL_G4 alias Travel
+persistent table ztravel_g4
+lock master
+//authorization master ( instance )
+//etag master LocalLastChangedAt
+{
+  create;
+  update;
+  delete;
+  field ( numbering : managed, readonly) TravelUuid;
+  mapping for ztravel_g4{
+    TravelUuid = travel_uuid;
+    TravelId = travel_id;
+    BusUuid = bus_uuid;
+    BusId = bus_id;
+    StartDate = start_date;
+    EmptySeats = empty_seats;
+    LastChangedAt = last_changed_at;
+    LocalLastChangedAt = local_last_changed_at;
+
+  }
+}

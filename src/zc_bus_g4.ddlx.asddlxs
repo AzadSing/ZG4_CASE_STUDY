@@ -1,0 +1,19 @@
+@Metadata.layer: #CORE
+annotate view ZC_Bus_g4
+    with 
+{
+@UI.facet: [{ id: 'Bus',
+    purpose: #STANDARD,
+    type: #IDENTIFICATION_REFERENCE,
+    label: 'All Buses',
+    position: 10}]
+    @UI: {  lineItem:       [ { position: 20 } ],
+          identification: [ { position: 20 } ],
+          selectionField: [ { position: 20 } ] }
+    BusId;
+    @UI.hidden: true
+    LastChangedAt;
+    @UI.hidden: true
+    LocalLastChangedAt;
+    
+}
